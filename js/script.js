@@ -1,34 +1,29 @@
 $(document).ready(function() {
 	$('button').click(function(){
-	if ($('input').val().trim().length === 0) {
-	$('div').show();
-	$('input').val("");
-
-} else if 
-		($('input').val().trim() % 15 === 0)  {
-	$('ul').append('<li id="fizz-buzz">' + 'Fizz-Buzz' + '</li>');
+	for ( var i = 1; i <= 100; i++)  
+	if	(i % 3 === 0 && i % 5 == 0)  {
+	$('ul').append('<li class="fizz-buzz">' + 'FizzBuzz' + '</li>');
 	$('div').hide("");
 	$('input').val("");
 
-} else if 
-($('input').val().trim() % 5 === 0) {
-	$('ul').append('<li id="buzz">' + 'Buzz' + '</li>');
+} else if ( i % 5 === 0) {
+	$('ul').append('<li class="buzz">' + 'Buzz' + '</li>');
 	$('div').hide("");
 	$('input').val("");
 } else if 
-	($('input').val().trim() % 3  === 0) {
-$('ul').append('<li id="fizz">' + 'Fizz'+'</li>' );
+	( i % 3  === 0) {
+$('ul').append('<li class="fizz">' + 'Fizz'+'</li>' );
 $('div').hide();
 $('input').val("");
 }
 
 
 else {
-	$('ul').append('<li>' + $('input').val() + '</li>');
+	$('ul').append('<li>' + i + '</li>');
 		$('input').val("");
 		$('div').hide();
-	};
-});
+		};
+	});
 });
 
 
